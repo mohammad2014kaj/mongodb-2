@@ -1,0 +1,38 @@
+<!-- views/database-report.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Database Report</title>
+    <!-- Add React-Table scripts and stylesheets here if needed -->
+</head>
+<body>
+    <h1>Database Report</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Family</th>
+                <th>Age</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (const entry of entries) { %>
+                <tr>
+                    <td><%= entry.name %></td>
+                    <td><%= entry.family %></td>
+                    <td><%= entry.age %></td>
+                    <td><%= entry.number %></td>
+                    <td><%= entry.email %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+</body>
+</html>
